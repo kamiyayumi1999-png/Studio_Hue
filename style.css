@@ -259,7 +259,8 @@ main {
 
 .circle {
     width: 220px;
-    height: 220px;
+    max-width: 220px;
+    aspect-ratio: 1/1;
     background-color: #1a1a1a;
     color: #FFFFFF;
     border-radius: 50%;
@@ -439,13 +440,14 @@ footer {
     }
 
     .plan-sp-item>img:not(.plan-sp-table) {
-        width: 45%;
+        width: 80%;
+        max-width:360px;
         height: auto;
     }
 
     .plan-sp-table {
         margin-top: 20px;
-        width: 70%;
+        width: 80%;
     }
 
 
