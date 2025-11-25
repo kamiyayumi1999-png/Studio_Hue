@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Marcellus', 'Noto Serif JP', serif;
+    background-color: #E3E4DC;
+    color: #99836E;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-inner,
+.container {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.section-sub-title {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E5D9C3;
+    border-bottom: 1px solid #CFCFC5;
+    z-index: 100;
+    height: 70px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-weight: normal;
+    line-height: 1;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #99836E;
+    position: absolute;
+    transition: all 0.25s;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+    bottom: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 6.75px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    bottom: 6.75px;
+    transform: rotate(-45deg);
+}
+
+.menu-nav ul {
+    display: flex;
+}
+
+.menu-nav li {
+    margin-left: 20px;
+}
+
+.menu-nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+}
+
+main {
+    padding-top: 70px;
+}
+
+
+.main-visual {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: calc(100vh - 70px);
+    background-image: url(images/main-visual.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-visual-title {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-visual-title h2 {
+    font-size: 2.0rem;
+    line-height: 1.6;
+    text-align: left;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sp-op {
+    display: none;
+}
+
+/* concept */
+
+.concept p {
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+/* gallery */
+
+.gallery-grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+}
+
+/* services */
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.services-list img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* plan */
+
+.plan-PC .plan-list {
+    display: flex;
+    gap: 20px;
+}
+
+.plan-PC .plan-list li {
+    flex: 1;
+}
+
+.plan-PC .plan-table {
+    margin-top: 80px;
+}
+
+.plan-SP {
+    display: none;
+}
+
+/* reserve */
+
+.reserve-button {
+    display: block;
+    width: 320px;
+    padding: 10px;
+    margin: 60px auto 0;
+    background-color: #99836E;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    font-family: 'Marcellus', serif;
+}
+
+.reserve-button:hover {
+    opacity: 0.8;
+}
+
+/* flow */
+
+.flow-circles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.flow-circle-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 220px;
+    height: 220px;
+    background-color: #1a1a1a;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle .step-number {
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.circle .step-title {
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+}
+
+.circle .step-jp {
+    font-size: 1.1rem;
+}
+
+.flow-descriptions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.flow-desc-item {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 10px;
+}
+
+.text-link{
+    font-weight:bold;
+    transition:all 0.5s;
+}
+
+
+/* access */
+
+.item-map iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+@media all and (max-width : 968px) {
+
+    /* header */
+    .hamburger {
+        display: block;
+    }
+
+    .menu-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(227, 228, 220, 0.95);
+        z-index: 199;
+        overflow-y: auto;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .menu-nav.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .menu-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+        gap: 4vh;
+    }
+
+    .menu-nav li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-nav li a {
+        font-size: 1.1rem;
+        font-weight: normal;
+        display: block;
+        padding: 5px 0;
+        letter-spacing: 0.1rem;
+
+    }
+
+    /* mainvisual */
+
+    .main-visual {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: calc(100vh - 70px);
+        background-image: url(images/main-visual.png);
+        background-size: cover;
+        background-position: 80% 20%; 
+    }
+
+    .main-visual h2{
+        display: none;
+    }
+
+    .sp-op {
+        display: flex;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #FFFFFF;
+        z-index: 99;
+
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .op-title h2 {
+        font-size: 2.0rem;
+        line-height: 1.6;
+        text-align: left;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+
+
+
+
+    /* PLAN */
+    .plan-PC {
+        display: none;
+    }
+
+    .plan-SP {
+        display: block;
+    }
+
+    .plan-sp-item {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .plan-sp-item>img:not(.plan-sp-table) {
+        width: 45%;
+        height: auto;
+    }
+
+    .plan-sp-table {
+        margin-top: 20px;
+        width: 70%;
+    }
+
+
+    .flow-box {
+        display: flex;
+    }
+
+    .flow-circles,
+    .flow-descriptions {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .flow-circle-item {
+        margin-bottom: 10px;
+    }
+
+    .flow-desc-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .flow-desc-item p {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    /* ====================================
+   PC版のアニメーション (969px以上)
+   ==================================== */
+    @media all and (min-width: 969px) {
+
+        /* 1. 最初の状態：透明で、少し下に配置 */
+        .menu-nav li {
+            opacity: 0;
+            transform: translateY(20px);
+            /* 20px下に下げる */
+            transition: all 0.8s ease;
+            /* 0.8秒かけてゆっくり動く */
+        }
+
+        /* 2. 読み込み完了後 (.on-loadがついた時)：元に戻す */
+        .menu-nav.on-load li {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* * ★おまけ：順番にふわっと出す設定
+     * nth-child(1) は1番目、(2)は2番目の要素
+     */
+        .menu-nav li:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .menu-nav li:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .menu-nav li:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .menu-nav li:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .menu-nav li:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .menu-nav li:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        .menu-nav li:nth-child(7) {
+            transition-delay: 0.7s;
+        }
+    }
+}
